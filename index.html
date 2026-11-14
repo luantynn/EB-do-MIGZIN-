@@ -1,8 +1,344 @@
-<!doctype html>
-<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EB DO MIGZIN</title><style>
-:root{--bg:#080d0a;--panel:#111a14;--green:#1e6b3d;--gold:#c8a85a;--text:#edf4ee;--muted:#a7b5aa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px Arial,sans-serif}.layout{display:flex;min-height:100vh}.side{width:245px;background:#0d1510;border-right:1px solid #26382b;padding:24px 16px;position:fixed;inset:0 auto 0 0}.brand{font-weight:800;color:var(--gold);font-size:20px;margin:12px 8px 30px}.nav a{display:block;color:var(--muted);text-decoration:none;padding:13px 14px;border-radius:8px;margin:4px 0}.nav a:hover,.nav a.active{background:#1a3021;color:white}.main{margin-left:245px;width:calc(100% - 245px);padding:24px;max-width:1200px}.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #26382b;padding-bottom:16px}.top a,.btn{background:var(--green);color:white;text-decoration:none;padding:11px 16px;border-radius:7px}.hero{margin-top:24px;padding:42px 30px;border:1px solid #35533c;border-radius:14px;background:linear-gradient(120deg,#14251a,#0b110d)}.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px}.hero h1{font-size:clamp(30px,5vw,48px);margin:12px 0}.hero p{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}.card{background:var(--panel);border:1px solid #26382b;border-radius:12px;padding:20px;margin:14px 0}.card h2{margin-top:0;color:var(--gold)}.muted{color:var(--muted)}.section{display:none}.section.active{display:block}.rank{padding:10px;border-bottom:1px solid #26382b}.mobile{display:none}@media(max-width:700px){.side{position:static;width:100%;height:auto;border:0;padding:12px}.layout{display:block}.nav{display:flex;overflow:auto;gap:4px}.nav a{white-space:nowrap}.main{margin:0;width:100%;padding:14px}.brand{margin:5px}.stats{grid-template-columns:1fr}.top{gap:12px}}
-</style></head><body><div class="layout"><aside class="side"><div class="brand">🛡️ EB DO MIGZIN</div><nav class="nav"><a class="active" href="#inicio" data-page="inicio">Início</a><a href="#perfil" data-page="perfil">Perfil</a><a href="#hierarquia" data-page="hierarquia">Hierarquia</a><a href="#promocoes" data-page="promocoes">Promoções</a><a href="#cdp" data-page="cdp">CDP</a><a href="#ranking" data-page="ranking">Ranking</a><a href="#divisoes" data-page="divisoes">Divisões</a><a href="#treinos" data-page="treinos">Treinos</a><a href="#historico" data-page="historico">Histórico</a></nav></aside><main class="main"><header class="top"><strong>Portal oficial • Exército Brasileiro</strong><a href="https://discord.gg/Vqe2N8MNA" target="_blank" rel="noopener">Entrar no Discord</a></header>
-<section id="inicio" class="section active"><div class="hero"><div class="eyebrow">DISCIPLINA • UNIÃO • FORÇA</div><h1>EB DO MIGZIN</h1><p>Juntos somos mais fortes.</p><a class="btn" href="https://discord.gg/Vqe2N8MNA" target="_blank" rel="noopener">Aceder ao servidor</a></div><div class="stats"><div class="card"><h2>Hierarquia</h2><p class="muted">Estrutura e cargos oficiais</p></div><div class="card"><h2>Treinos</h2><p class="muted">Informações sobre atividades</p></div><div class="card"><h2>Comunicados</h2><p class="muted">Novidades do servidor</p></div></div><div class="card"><h2>Bem-vindo ao portal</h2><p class="muted">Este é o espaço informativo da comunidade EB DO MIGZIN. Algumas áreas serão atualizadas pela administração.</p></div></section>
-<section id="perfil" class="section"><div class="card"><h2>Perfil</h2><p class="muted">A área de perfil e autenticação será configurada numa fase futura.</p></div></section>
-<section id="hierarquia" class="section"><div class="card"><h2>Hierarquia oficial</h2><div class="rank">Criadores</div><div class="rank">Administração</div><div class="rank">Supremacia</div><div class="rank">Oficiais do Governo</div><div class="rank">Oficiais da Elite</div><div class="rank">Oficiais-generais</div><div class="rank">Oficiais superiores</div><div class="rank">Oficiais intermediários</div><div class="rank">Oficiais subalternos</div><div class="rank">Cadetes, graduados e praças</div></div></section>
-<section id="promocoes" class="section"><div class="card"><h2>Promoções</h2><p class="muted">Os registos de promoções serão publicados pela administração.</p></div></section><section id="cdp" class="section"><div class="card"><h2>CDP</h2><p class="muted">Informações e comunicados do CDP.</p></div></section><section id="ranking" class="section"><div class="card"><h2>Ranking</h2><p class="muted">O ranking será atualizado quando existir integração de dados.</p></div></section><section id="divisoes" class="section"><div class="card"><h2>Divisões</h2><p class="muted">Área reservada para apresentar as divisões da comunidade.</p></div></section><section id="treinos" class="section"><div class="card"><h2>Treinos</h2><p class="muted">Calendário e informações dos treinos serão adicionados aqui.</p></div></section><section id="historico" class="section"><div class="card"><h2>Histórico</h2><p class="muted">Registos e comunicados anteriores.</p></div></section></main></div><script>document.querySelectorAll('[data-page]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(a.dataset.page).classList.add('active');document.querySelectorAll('[data-page]').forEach(n=>n.classList.remove('active'));a.classList.add('active');history.replaceState(null,'','#'+a.dataset.page)}));</script></body></html>
+<!DOCTYPE html>
+<html lang="pt-PT" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EB do MIGZIN • Sistema Central de Gestão Militar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+    :root {
+      --bg-base: #060907;
+      --bg-panel: #0b110d;
+      --bg-card: #101913;
+      --border-tac: #1c3123;
+      --accent: #22c55e;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-base);
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      color: #e4ede7;
+    }
+
+    .font-mono-tac { font-family: 'JetBrains Mono', monospace; }
+
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #070b08; }
+    ::-webkit-scrollbar-thumb { background: #1e3526; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #22c55e; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- TOPBAR -->
+  <header class="border-b border-[#1c3123] bg-[#080d0a]/95 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-[#122418] border border-green-500/40 flex items-center justify-center shadow-[0_0_15px_rgba(34,197,94,0.18)]">
+          <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-extrabold tracking-wider text-white text-sm sm:text-base">EXÉRCITO BRASILEIRO</h1>
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-mono-tac font-bold bg-green-500/15 text-green-400 border border-green-500/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span> ONLINE
+            </span>
+          </div>
+          <p class="text-xs font-mono-tac text-green-500/80">EB DO MIGZIN • SISTEMA CENTRAL</p>
+        </div>
+      </div>
+
+      <!-- SELETOR DE SESSÃO (PARA TESTAR PERMISSÕES) -->
+      <div class="flex items-center gap-3 bg-[#0e1711] border border-[#1c3123] px-3 py-1.5 rounded-lg">
+        <div class="text-right">
+          <p class="text-[10px] uppercase tracking-wider text-zinc-400">Sessão Ativa (Simulação)</p>
+          <select id="activeUserSelect" class="bg-transparent text-xs font-semibold text-green-400 focus:outline-none cursor-pointer"></select>
+        </div>
+        <div id="activeRoleBadge" class="px-2.5 py-1 rounded text-xs font-bold border"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="max-w-7xl w-full mx-auto px-4 py-6 flex-1 space-y-6">
+
+    <!-- ESTATÍSTICAS RÁPIDAS -->
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4" id="statsGrid"></section>
+
+    <!-- NAVEGAÇÃO DE SEPARADORES -->
+    <nav class="flex flex-wrap gap-2 border-b border-[#1c3123] pb-3">
+      <button onclick="switchTab('efetivo')" data-tab="efetivo" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition">Efetivo & Promoções</button>
+      <button onclick="switchTab('divisoes')" data-tab="divisoes" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition">Divisões</button>
+      <button onclick="switchTab('historico')" data-tab="historico" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition">Histórico Oficial</button>
+      <button onclick="switchTab('meu-painel')" data-tab="meu-painel" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition">O Meu Painel</button>
+      <button onclick="switchTab('permissoes')" data-tab="permissoes" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition">Hierarquia & Cargos</button>
+    </nav>
+
+    <!-- TAB 1: EFETIVO & PROMOÇÕES -->
+    <section id="tab-efetivo" class="tab-content space-y-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 bg-[#0b110d] border border-[#1c3123] p-4 rounded-xl">
+        <div class="flex flex-wrap items-center gap-3 flex-1">
+          <input id="searchInput" type="text" placeholder="Pesquisar por Nick Roblox ou Discord..."
+            class="w-full md:w-72 bg-[#060907] border border-[#1c3123] focus:border-green-500 rounded-lg px-3 py-2 text-sm text-white placeholder-zinc-500 focus:outline-none" />
+          <select id="divisionFilter"
+            class="bg-[#060907] border border-[#1c3123] focus:border-green-500 rounded-lg px-3 py-2 text-sm text-zinc-200 focus:outline-none">
+            <option value="ALL">Todas as Divisões</option>
+          </select>
+        </div>
+        <button id="btnOpenAddModal" onclick="openAddModal()"
+          class="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 text-black font-bold text-sm transition shadow-[0_0_15px_rgba(34,197,94,0.25)]">
+          + Registar Membro
+        </button>
+      </div>
+
+      <div class="bg-[#0b110d] border border-[#1c3123] rounded-xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-[#1c3123] bg-[#0e1711] text-[11px] font-mono-tac uppercase tracking-wider text-zinc-400">
+                <th class="py-3.5 px-4">Militar (Roblox / Discord)</th>
+                <th class="py-3.5 px-4">Cargo Admin</th>
+                <th class="py-3.5 px-4">Patente EB</th>
+                <th class="py-3.5 px-4">Divisão / Patente Div.</th>
+                <th class="py-3.5 px-4 text-right">Ações de Comando</th>
+              </tr>
+            </thead>
+            <tbody id="membersTableBody" class="divide-y divide-[#15241a] text-sm"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: DIVISÕES -->
+    <section id="tab-divisoes" class="tab-content hidden grid md:grid-cols-2 lg:grid-cols-3 gap-4"></section>
+
+    <!-- TAB 3: HISTÓRICO OFICIAL -->
+    <section id="tab-historico" class="tab-content hidden space-y-4">
+      <div class="bg-[#0b110d] border border-[#1c3123] rounded-xl overflow-hidden">
+        <div class="p-4 border-b border-[#1c3123] flex items-center justify-between">
+          <div>
+            <h2 class="font-bold text-white">Diário Oficial de Promoções e Alterações</h2>
+            <p class="text-xs text-zinc-400">Registo auditável sincronizado com o Webhook do Discord</p>
+          </div>
+          <span class="text-xs font-mono-tac text-green-400 bg-green-500/10 border border-green-500/30 px-2.5 py-1 rounded">AUDITORIA ATIVA</span>
+        </div>
+        <div id="historyList" class="divide-y divide-[#15241a]"></div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MEU PAINEL -->
+    <section id="tab-meu-painel" class="tab-content hidden"></section>
+
+    <!-- TAB 5: PERMISSÕES -->
+    <section id="tab-permissoes" class="tab-content hidden">
+      <div class="bg-[#0b110d] border border-[#1c3123] rounded-xl p-6 space-y-4">
+        <h2 class="text-lg font-bold text-white">Tabela Oficial de Hierarquia Administrativa</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[#1c3123] text-zinc-400 font-mono-tac text-xs uppercase">
+                <th class="py-3 px-4">Cargo Administrativo</th>
+                <th class="py-3 px-4">Nível</th>
+                <th class="py-3 px-4">Permissões no Sistema</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#15241a]">
+              <tr><td class="py-3 px-4 font-semibold text-amber-400">👑 Dono</td><td class="py-3 px-4 font-mono-tac">NV. 5</td><td class="py-3 px-4 text-zinc-300">Acesso total ao sistema, cargos administrativos, patentes até Marechal e configurações.</td></tr>
+              <tr><td class="py-3 px-4 font-semibold text-emerald-400">🛡️ Administrador</td><td class="py-3 px-4 font-mono-tac">NV. 4</td><td class="py-3 px-4 text-zinc-300">Gestão geral de membros, divisões e promoções (até Coronel).</td></tr>
+              <tr><td class="py-3 px-4 font-semibold text-green-400">⭐ Oficial autorizado</td><td class="py-3 px-4 font-mono-tac">NV. 3</td><td class="py-3 px-4 text-zinc-300">Promoções e rebaixamentos de Praças e Oficiais Subalternos (até Capitão).</td></tr>
+              <tr><td class="py-3 px-4 font-semibold text-teal-400">🎖️ Oficial superior</td><td class="py-3 px-4 font-mono-tac">NV. 2</td><td class="py-3 px-4 text-zinc-300">Promoções apenas para membros da sua própria divisão (até 1º Sargento).</td></tr>
+              <tr><td class="py-3 px-4 font-semibold text-zinc-400">👤 Membro</td><td class="py-3 px-4 font-mono-tac">NV. 1</td><td class="py-3 px-4 text-zinc-400">Consulta o próprio painel, patentes, divisões e histórico geral.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- MODAL: REGISTAR MEMBRO -->
+  <div id="addModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+    <div class="bg-[#0b110d] border border-green-500/40 rounded-xl max-w-md w-full p-6 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between">
+        <h3 class="font-bold text-lg text-white">Registar Novo Militar</h3>
+        <button onclick="closeAddModal()" class="text-zinc-400 hover:text-white">&times;</button>
+      </div>
+      <form id="addMemberForm" class="space-y-3">
+        <div>
+          <label class="block text-xs text-zinc-400 mb-1">Nick do Roblox</label>
+          <input required id="newRoblox" type="text" placeholder="Ex: Soldado_SilvaBR" class="w-full bg-[#060907] border border-[#1c3123] rounded-lg px-3 py-2 text-sm text-white focus:border-green-500 focus:outline-none" />
+        </div>
+        <div>
+          <label class="block text-xs text-zinc-400 mb-1">Discord (@utilizador)</label>
+          <input required id="newDiscord" type="text" placeholder="Ex: silva#0001 ou @silva" class="w-full bg-[#060907] border border-[#1c3123] rounded-lg px-3 py-2 text-sm text-white focus:border-green-500 focus:outline-none" />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs text-zinc-400 mb-1">Patente Inicial</label>
+            <select id="newRank" class="w-full bg-[#060907] border border-[#1c3123] rounded-lg px-3 py-2 text-sm text-white focus:border-green-500 focus:outline-none"></select>
+          </div>
+          <div>
+            <label class="block text-xs text-zinc-400 mb-1">Divisão</label>
+            <select id="newDiv" class="w-full bg-[#060907] border border-[#1c3123] rounded-lg px-3 py-2 text-sm text-white focus:border-green-500 focus:outline-none"></select>
+          </div>
+        </div>
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="closeAddModal()" class="px-4 py-2 rounded-lg bg-zinc-800 text-zinc-300 text-sm hover:bg-zinc-700">Cancelar</button>
+          <button type="submit" class="px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 text-black font-bold text-sm">Confirmar Registo</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- NOTIFICAÇÃO TOAST -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-[#0d1911] border border-green-500/60 text-white px-4 py-3 rounded-xl shadow-[0_0_25px_rgba(34,197,94,0.2)] text-sm"></div>
+
+  <script>
+    const EB_RANKS = [
+      "Recruta", "Soldado", "Cabo", "3º Sargento", "2º Sargento", "1º Sargento",
+      "Subtenente", "Aspirante a Oficial", "2º Tenente", "1º Tenente", "Capitão",
+      "Major", "Tenente-Coronel", "Coronel", "General de Brigada",
+      "General de Divisão", "General de Exército", "Marechal"
+    ];
+
+    const DIVISIONS = [
+      { id: "INF", name: "Infantaria", desc: "Força base de combate terrestre e defesa de perímetro.", ranks: ["Recruta INF", "Infantariano", "Sargento INF", "Comandante INF"] },
+      { id: "BPE", name: "BPE (Polícia do Exército)", desc: "Disciplina, escolta de autoridades e controlo interno.", ranks: ["Estagiário BPE", "Agente BPE", "Inspetor BPE", "Comandante BPE"] },
+      { id: "FE", name: "Forças Especiais", desc: "Operações táticas, reconhecimento e resgate.", ranks: ["Operador Jr.", "Comandos", "Especialista FE", "Comandante FE"] },
+      { id: "CIGS", name: "CIGS (Guerra na Selva)", desc: "Patrulhamento e sobrevivência em ambiente amazónico.", ranks: ["Aluno CIGS", "Guerreiro de Selva", "Instrutor CIGS", "Comandante CIGS"] }
+    ];
+
+    const ROLES = {
+      dono: { label: "👑 Dono", level: 5, badge: "bg-amber-500/15 text-amber-400 border-amber-500/40", maxRankIdx: 17 },
+      adm: { label: "🛡️ Administrador", level: 4, badge: "bg-emerald-500/15 text-emerald-400 border-emerald-500/40", maxRankIdx: 13 },
+      oficial_autorizado: { label: "⭐ Oficial autorizado", level: 3, badge: "bg-green-500/15 text-green-400 border-green-500/40", maxRankIdx: 10 },
+      oficial_superior: { label: "🎖️ Oficial superior", level: 2, badge: "bg-teal-500/15 text-teal-400 border-teal-500/40", maxRankIdx: 5 },
+      membro: { label: "👤 Membro", level: 1, badge: "bg-zinc-500/15 text-zinc-300 border-zinc-500/30", maxRankIdx: -1 }
+    };
+
+    let members = [
+      { id: 1, roblox: "MIGZIN_Oficial", discord: "@migzin", role: "dono", rankIdx: 17, divId: "FE", divRankIdx: 3 },
+      { id: 2, roblox: "Cmdt_RafaelBR", discord: "@rafael.adm", role: "adm", rankIdx: 13, divId: "BPE", divRankIdx: 3 },
+      { id: 3, roblox: "Cap_Henrique", discord: "@henrique_eb", role: "oficial_autorizado", rankIdx: 10, divId: "INF", divRankIdx: 3 },
+      { id: 4, roblox: "Maj_LucasSilva", discord: "@lucas.cigs", role: "oficial_superior", rankIdx: 11, divId: "CIGS", divRankIdx: 2 },
+      { id: 5, roblox: "Sgt_Matheus09", discord: "@matheus09", role: "membro", rankIdx: 3, divId: "BPE", divRankIdx: 1 },
+      { id: 6, roblox: "Sd_GabrielRP", discord: "@gabriel_rp", role: "membro", rankIdx: 1, divId: "INF", divRankIdx: 1 }
+    ];
+
+    let historyLogs = [
+      { date: "14/11/2026 12:40", actor: "MIGZIN_Oficial", target: "Cmdt_RafaelBR", type: "EB", from: "Tenente-Coronel", to: "Coronel" },
+      { date: "14/11/2026 11:15", actor: "Cmdt_RafaelBR", target: "Sgt_Matheus09", type: "EB", from: "Cabo", to: "3º Sargento" }
+    ];
+
+    let activeUserId = 1;
+    let currentTab = "efetivo";
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, m => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[m]));
+    }
+
+    function getActiveUser() {
+      return members.find(m => m.id === activeUserId) || members[0];
+    }
+
+    function canModifyMember(actor, target, isDivision = false) {
+      if (actor.role === "membro") return false;
+      if (actor.id === target.id && actor.role !== "dono") return false;
+      if (ROLES[actor.role].level <= ROLES[target.role].level && actor.role !== "dono") return false;
+      if (actor.role === "oficial_superior" && actor.divId !== target.divId) return false;
+      if (!isDivision && target.rankIdx >= ROLES[actor.role].maxRankIdx && actor.role !== "dono") return false;
+      return true;
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      toast.innerHTML = msg;
+      toast.classList.remove("hidden");
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => toast.classList.add("hidden"), 3500);
+    }
+
+    function promoteMember(id, delta) {
+      const actor = getActiveUser();
+      const target = members.find(m => m.id === id);
+      if (!target) return;
+
+      const nextIdx = target.rankIdx + delta;
+      if (nextIdx < 0 || nextIdx >= EB_RANKS.length) return;
+      if (delta > 0 && nextIdx > ROLES[actor.role].maxRankIdx) {
+        return showToast(`<span class="text-red-400 font-bold">Acesso Negado:</span> O teu cargo não permite promover acima de ${EB_RANKS[ROLES[actor.role].maxRankIdx]}.`);
+      }
+
+      const oldRank = EB_RANKS[target.rankIdx];
+      target.rankIdx = nextIdx;
+      const newRank = EB_RANKS[target.rankIdx];
+
+      const now = new Date().toLocaleString("pt-PT", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+      historyLogs.unshift({ date: now, actor: actor.roblox, target: target.roblox, type: "EB", from: oldRank, to: newRank });
+
+      showToast(`<span class="text-green-400 font-bold">${delta > 0 ? "Promoção" : "Rebaixamento"} Registado:</span> ${escapeHtml(target.roblox)} agora é <strong>${newRank}</strong>.`);
+      renderAll();
+    }
+
+    function promoteDiv(id, delta) {
+      const actor = getActiveUser();
+      const target = members.find(m => m.id === id);
+      const div = DIVISIONS.find(d => d.id === target.divId);
+      if (!target || !div) return;
+
+      const nextIdx = target.divRankIdx + delta;
+      if (nextIdx < 0 || nextIdx >= div.ranks.length) return;
+
+      const oldRank = div.ranks[target.divRankIdx];
+      target.divRankIdx = nextIdx;
+      const newRank = div.ranks[target.divRankIdx];
+
+      const now = new Date().toLocaleString("pt-PT", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+      historyLogs.unshift({ date: now, actor: actor.roblox, target: target.roblox, type: `DIV (${div.id})`, from: oldRank, to: newRank });
+
+      showToast(`<span class="text-green-400 font-bold">Divisão Atualizada:</span> ${escapeHtml(target.roblox)} → <strong>${newRank}</strong>.`);
+      renderAll();
+    }
+
+    function renderSessionSelector() {
+      const sel = document.getElementById("activeUserSelect");
+      sel.innerHTML = members.map(m => `<option value="${m.id}" ${m.id === activeUserId ? "selected" : ""}>${escapeHtml(m.roblox)} (${ROLES[m.role].label})</option>`).join("");
+      const actor = getActiveUser();
+      const badge = document.getElementById("activeRoleBadge");
+      badge.className = `px-2.5 py-1 rounded text-xs font-bold border ${ROLES[actor.role].badge}`;
+      badge.textContent = ROLES[actor.role].label;
+
+      const btnAdd = document.getElementById("btnOpenAddModal");
+      btnAdd.classList.toggle("hidden", ROLES[actor.role].level < 3);
+    }
+
+    function renderStats() {
+      const actor = getActiveUser();
+      const div = DIVISIONS.find(d => d.id === actor.divId);
+      document.getElementById("statsGrid").innerHTML = `
+        <div class="bg-[#0b110d] border border-[#1c3123] p-4 rounded-xl">
+          <p class="text-xs text-zinc-400 uppercase font-mono-tac">Efetivo Total</p>
+          <p class="text-2xl font-extrabold text-white mt-1">${members.length}</p>
+        </div>
+        <div class="bg-[#0b110d] border border-[#1c3123] p-4 rounded-xl">
+          <p class="text-xs text-zinc-400 uppercase font-mono-tac">Divisões Ativas</p>
+          <p class="text-2xl font-extrabold text-green-400 mt-1">${DIVISIONS.length}</p>
+        </div>
+        <div class="bg-[#0b110d] border border-[#1c3123] p-4 rounded-xl">
+          <p class="text-xs text-zinc-400 uppercase font-mono-tac">Registos no Diário</p>
+          <p class="text-2xl font-extrabold text-white mt-1">${historyLogs.length}</p>
+        </div>
+        <div class="bg-[#0b110d] border border-[#1c3123] p-4 rounded-xl">
+          <p class="text-xs text-zinc-400 uppercase font-mono-tac">A Tua Patente</p>
+          <p class="text-lg font-bold text-green-400 mt-1 truncate">${EB_RANKS[actor.rankIdx]}</p>
+          <p class="text-[11px] text-zinc-400 truncate">${div ? div.name : "Sem divisão"}</p>
+        </div>
+      `
